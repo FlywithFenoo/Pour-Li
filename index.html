@@ -5,11 +5,11 @@
   <title>Surprise ❤️</title>
   <style>
     body {
-      background: #ffe6f0;
+      background: linear-gradient(to bottom, #4b2c5e, #1a0f1f); 
       font-family: 'Courier New', monospace;
       text-align: center;
       padding-top: 80px;
-      color: #d6336c;
+      color: #f8c8dc;
     }
     #content {
       font-size: 22px;
@@ -17,7 +17,7 @@
       white-space: pre-line;
     }
     button {
-      background-color: #ff99c8;
+      background-color: #d6336c;
       border: none;
       padding: 12px 25px;
       font-size: 18px;
@@ -30,7 +30,7 @@
       font-size: 24px;
       font-style: italic;
       margin-top: 40px;
-      color: #880e4f;
+      color: #ff99c8;
     }
   </style>
 </head>
@@ -55,7 +55,7 @@
       typing();
     }
 
-    // Écran 1
+    
     function screen1() {
       typeWriter("salut , j ai un truc à te montrer", () => {
         document.getElementById("buttons").innerHTML =
@@ -63,17 +63,26 @@
       });
     }
 
-    // Écran 2
+    
     function screen2() {
       document.getElementById("buttons").innerHTML = "";
       typeWriter("tu connais billie eilish ?", () => {
         document.getElementById("buttons").innerHTML =
-          "<button onclick='screen3()'>oui - continuer</button>" +
-          "<button onclick='screen3()'>non - continuer quand même</button>";
+          "<button onclick='screenHostage()'>oui - continuer</button>" +
+          "<button onclick='screenHostage()'>non - continuer quand même</button>";
       });
     }
 
-    // Écran 3
+    
+    function screenHostage() {
+      document.getElementById("buttons").innerHTML = "";
+      typeWriter("parmi ses titres j'aime bien HOSTAGE, tu devrais écouter xd", () => {
+        document.getElementById("buttons").innerHTML =
+          "<button onclick='screen3()'>continuer</button>";
+      });
+    }
+
+    
     function screen3() {
       document.getElementById("buttons").innerHTML = "";
       typeWriter(`I wanna be alone
@@ -86,7 +95,7 @@ jsp la suite... mais tout ça pour te dire que je t'aime fort ma fleur`, () => {
       });
     }
 
-    // Lancer écran 1 au chargement
+    
     screen1();
   </script>
 </body>
