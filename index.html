@@ -5,11 +5,12 @@
   <title>Surprise ❤️</title>
   <style>
     body {
-      background: linear-gradient(to bottom, #4b2c5e, #1a0f1f); 
+      background: #ffd6e7; 
       font-family: 'Courier New', monospace;
       text-align: center;
       padding-top: 80px;
-      color: #f8c8dc;
+      color: #000000; 
+      font-weight: bold; 
     }
     #content {
       font-size: 22px;
@@ -17,7 +18,7 @@
       white-space: pre-line;
     }
     button {
-      background-color: #d6336c;
+      background-color: #ff4d88;
       border: none;
       padding: 12px 25px;
       font-size: 18px;
@@ -25,12 +26,14 @@
       cursor: pointer;
       color: white;
       margin: 10px;
+      font-weight: bold;
     }
     .signature {
       font-size: 24px;
       font-style: italic;
       margin-top: 40px;
-      color: #ff99c8;
+      color: #000000; 
+      font-weight: bold;
     }
   </style>
 </head>
@@ -39,7 +42,7 @@
   <div id="buttons"></div>
 
   <script>
-    // Fonction d'écriture lettre par lettre
+    
     function typeWriter(text, callback) {
       let i = 0;
       document.getElementById("content").innerHTML = "";
@@ -85,13 +88,13 @@
     
     function screen3() {
       document.getElementById("buttons").innerHTML = "";
-      typeWriter(`I wanna be alone
+      typeWriter(`"I wanna be alone
 Alone with you, does that make sense?
 I wanna steal your soul
-And hide you in my treasure chest
-jsp la suite... mais tout ça pour te dire que je t'aime fort ma fleur`, () => {
+And hide you in my treasure chest"
+jsp la suite... mais tout ça pour te dire que t'es précieuse pour moi et je t'aime fort ma fleur `, () => {
         document.getElementById("buttons").innerHTML =
-          "<div class='signature'>Fenoo</div>";
+          "<div class='signature'>ton Fenoo</div>";
       });
     }
 
