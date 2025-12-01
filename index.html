@@ -6,15 +6,15 @@
   <title>Surprise ❤️</title>
   <style>
     body {
-      background: #ffd6e7; /* full rose pastel */
+      background: #ffd6e7; 
       font-family: 'Courier New', monospace;
       text-align: center;
       padding-top: 80px;
-      color: #000000; /* texte noir */
-      font-weight: bold; /* gras */
+      color: #000000; 
+      font-weight: bold; 
     }
     #content {
-      font-size: 5vw; /* texte adaptatif */
+      font-size: 5vw; 
       margin-bottom: 40px;
       white-space: pre-line;
     }
@@ -22,7 +22,7 @@
       background-color: #ff4d88;
       border: none;
       padding: 12px 25px;
-      font-size: 4vw; /* adaptatif */
+      font-size: 4vw; 
       border-radius: 10px;
       cursor: pointer;
       color: white;
@@ -30,7 +30,7 @@
       font-weight: bold;
     }
     .signature {
-      font-size: 6vw; /* signature bien visible */
+      font-size: 6vw; 
       font-style: italic;
       margin-top: 40px;
       color: #000000;
@@ -43,7 +43,7 @@
   <div id="buttons"></div>
 
   <script>
-    // Fonction d'écriture lettre par lettre
+    
     function typeWriter(text, callback) {
       let i = 0;
       document.getElementById("content").innerHTML = "";
@@ -59,7 +59,7 @@
       typing();
     }
 
-    // Écran 1
+    
     function screen1() {
       typeWriter("salut , j ai un truc à te montrer", () => {
         document.getElementById("buttons").innerHTML =
@@ -67,7 +67,7 @@
       });
     }
 
-    // Écran 2
+    
     function screen2() {
       document.getElementById("buttons").innerHTML = "";
       typeWriter("tu connais billie eilish ?", () => {
@@ -77,7 +77,7 @@
       });
     }
 
-    // Nouvel écran "HOSTAGE"
+    
     function screenHostage() {
       document.getElementById("buttons").innerHTML = "";
       typeWriter("parmi ses titres j'aime bien HOSTAGE, tu devrais écouter xd", () => {
@@ -86,7 +86,7 @@
       });
     }
 
-    // Écran 3 (final)
+    
     function screen3() {
       document.getElementById("buttons").innerHTML = "";
       typeWriter(`I wanna be alone
@@ -99,7 +99,7 @@ jsp la suite... mais tout ça pour te dire que je t'aime fort ma fleur`, () => {
       });
     }
 
-    // Lancer écran 1 au chargement
+    
     screen1();
   </script>
 </body>
