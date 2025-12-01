@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise ❤️</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding-top: 80px;
+      color: #d6336c;
+    }
+    #content {
+      font-size: 22px;
+      margin-bottom: 40px;
+      white-space: pre-line;
+    }
+    button {
+      background-color: #ff99c8;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      margin: 10px;
+    }
+    .signature {
+      font-size: 24px;
+      font-style: italic;
+      margin-top: 40px;
+      color: #880e4f;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+  <div id="buttons"></div>
+
+  <script>
+    // Fonction d'écriture lettre par lettre
+    function typeWriter(text, callback) {
+      let i = 0;
+      document.getElementById("content").innerHTML = "";
+      function typing() {
+        if (i < text.length) {
+          document.getElementById("content").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typing, 80);
+        } else if (callback) {
+          callback();
+        }
+      }
+      typing();
+    }
+
+    // Écran 1
+    function screen1() {
+      typeWriter("salut , j ai un truc à te montrer", () => {
+        document.getElementById("buttons").innerHTML =
+          "<button onclick='screen2()'>tap here</button>";
+      });
+    }
+
+    // Écran 2
+    function screen2() {
+      document.getElementById("buttons").innerHTML = "";
+      typeWriter("tu connais billie eilish ?", () => {
+        document.getElementById("buttons").innerHTML =
+          "<button onclick='screen3()'>oui - continuer</button>" +
+          "<button onclick='screen3()'>non - continuer quand même</button>";
+      });
+    }
+
+    // Écran 3
+    function screen3() {
+      document.getElementById("buttons").innerHTML = "";
+      typeWriter(`I wanna be alone
+Alone with you, does that make sense?
+I wanna steal your soul
+And hide you in my treasure chest
+jsp la suite... mais tout ça pour te dire que je t'aime fort ma fleur`, () => {
+        document.getElementById("buttons").innerHTML =
+          "<div class='signature'>Fenoo</div>";
+      });
+    }
+
+    // Lancer écran 1 au chargement
+    screen1();
+  </script>
+</body>
+</html>
